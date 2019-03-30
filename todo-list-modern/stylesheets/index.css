@@ -1,0 +1,373 @@
+
+@font-face {
+	font-family: 'fontello';
+	font-weight: normal;
+	font-style: normal;
+
+	src: url('../fonts/fontello.eot?78415924');
+	src: url('../fonts/fontello.eot?78415924#iefix') format('embedded-opentype'), url('../fonts/fontello.woff2?78415924') format('woff2'), url('../fonts/fontello.woff?78415924') format('woff'), url('../fonts/fontello.ttf?78415924') format('truetype'), url('../fonts/fontello.svg?78415924#fontello') format('svg');
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'fontello';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1em;
+
+	display: inline-block;
+
+	width: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
+
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+	content: '\e800';
+}
+
+.icon-edit:before {
+	content: '\e801';
+}
+
+.icon-trash:before {
+	content: '\f1f8';
+}
+
+html {
+	font-size: 62.5%;
+
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+	background-color: #0d202d;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.light-theme {
+	background-color: #fff;
+}
+
+.light-theme .app {
+	background-color: #000000;
+	-webkit-box-shadow: 0 0 10px #596275;
+	box-shadow: 0 0 10px #596275;
+}
+
+.light-theme .app-head {
+	color: #e17055;
+}
+
+.light-theme .app-form__input:hover,
+.light-theme .app-form__input:focus {
+	border-bottom-color: #e17055;
+}
+
+.light-theme .app-form__button {
+	background-color: #e17055;
+}
+
+.light-theme .app-form__button:hover,
+.light-theme .app-form__button:focus {
+	background-color: #e17055;
+	-webkit-box-shadow: 0 0 20px 0 #e17055;
+	box-shadow: 0 0 20px 0 #e17055;
+}
+
+.light-theme .app-list__item {
+	border-bottom-color: #e17055;
+}
+
+.light-theme .app-clear {
+	color: #fff;
+	background-color: #e17055;
+}
+
+body {
+	font-family: 'Montserrat', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+
+	margin: 0;
+	padding: 0;
+	padding: 0 10px;
+	padding: 0rem 1rem;
+
+	color: #fff;
+}
+
+/**** #.app ****/
+.app {
+	width: 100%;
+	max-width: 600px;
+	max-width: 60rem;
+	margin: auto;
+	margin-top: 3.75em;
+
+	background-color: #283643;
+	-webkit-box-shadow: 0 0 0 #0c1d29;
+	box-shadow: 0 0 0 #0c1d29;
+}
+
+.app__header {
+	position: relative;
+
+	padding: 1.875em 1.25em .625em;
+}
+
+.app__head {
+	font-weight: 400;
+
+	margin: 0;
+	margin-bottom: .5em;
+	padding: 0;
+}
+
+.app-form {
+	position: relative;
+}
+
+.app-form__input {
+	font-family: inherit;
+	font-size: 18px;
+	font-size: 1.8rem;
+
+	width: 90%;
+	padding: 1.125em;
+
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+	color: #fff;
+	border: none;
+	border-bottom: .083em solid #1e2b36;
+	background: transparent;
+}
+
+.app-form__input:hover,
+.app-form__input:focus {
+	border-bottom-color: #9b9d9f;
+	outline: none;
+}
+
+.app-form__button {
+	font-family: inherit;
+	font-size: 18px;
+	font-size: 1.8rem;
+
+	position: absolute;
+	right: 1em;
+	bottom: -1.4em;
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	width: 100%;
+	max-width: 2.944em;
+	padding: .833em;
+
+	cursor: pointer;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+	color: #fff;
+	border: none;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #222b34;
+	-webkit-box-shadow: 0 0 7px 0 #222b34;
+	box-shadow: 0 0 7px 0 #222b34;
+
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.app-form__button:hover,
+.app-form__button:focus {
+	outline: none;
+	background-color: #e74c3c;
+	-webkit-box-shadow: 0 0 7px 0 #9b9d9f;
+	box-shadow: 0 0 7px 0 #9b9d9f;
+}
+
+.app__message {
+	display: none;
+
+	margin: 0;
+	padding: 1em;
+
+	text-align: center;
+
+	border-top: .083em solid transparent;
+	border-bottom: .083em solid transparent;
+}
+
+.app__message_show {
+	display: block;
+}
+
+.app__message_success {
+	color: #2ecc71;
+	border-top: .083em solid #2ecc71;
+	border-bottom: .083em solid #2ecc71;
+}
+
+.app__message_error {
+	color: #e74c3c;
+	border-top: .083em solid #e74c3c;
+	border-bottom: .083em solid #e74c3c;
+}
+
+.app__list {
+	margin: 0;
+	margin-top: .938em;
+	padding: 0;
+}
+
+.app-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	padding: 1em;
+
+	border-bottom: .083em solid #1e2b36;
+
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	-webkit-align-items: baseline;
+	align-items: baseline;
+}
+
+.app-item__text {
+	width: 100%;
+	max-width: 80%;
+	margin-right: 20px;
+	margin-right: 2rem;
+
+	word-break: break-all;
+}
+
+.app-item__text_complete {
+	text-decoration: line-through;
+
+	opacity: .8;
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+}
+
+.app-item__edit {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	width: 100%;
+	max-width: 20%;
+
+	-ms-flex-pack: distribute;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+}
+
+.app-item__edit a {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.app-item__complete {
+	color: #2ecc71;
+}
+
+.app-item__update {
+	color: #b9c3c5;
+}
+
+.app-item__delete {
+	color: #f62f5d;
+}
+
+.app__clear {
+	font-family: inherit;
+	font-size: 16px;
+	font-size: 1.6rem;
+
+	display: block;
+
+	width: 100%;
+	margin: auto;
+	margin-top: 3em;
+	padding: .857em 1.286em;
+
+	cursor: pointer;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+
+	color: #e17055;
+	border: none;
+	border-top: .055em solid #e17055;
+	border-bottom: .055em solid #e17055;
+	background-color: transparent;
+}
+
+.app__clear:hover,
+.app__clear:focus {
+	color: #fff;
+	outline: none;
+	background-color: #e17055;
+}
+
+.visability {
+	opacity: .4;
+
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=40)';
+}
+
+.theme {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	cursor: pointer;
+
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.theme img {
+	width: 50px;
+	width: 5rem;
+	height: 50px;
+	height: 5rem;
+}
