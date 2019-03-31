@@ -1,0 +1,203 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'PT Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: 1rem;
+	color: #000;
+	background-color: #d0d4df;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+.content-title {
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+/**** #.user ****/
+.user {
+	max-width: 800px;
+	max-width: 50rem;
+	margin: auto;
+	background-color: #fafafa;
+	-webkit-box-shadow: 0px 8px 7rem rgba(0, 0, 0, 0.45);
+	box-shadow: 0px 8px 7rem rgba(0, 0, 0, 0.45);
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+}
+
+.user-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 16px;
+	padding: 1rem;
+}
+
+/**** #.user-avatar ****/
+.user-avatar {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+}
+
+
+/**** #.user-name ****/
+.user-name {
+	font-size: 48px;
+	font-size: 3rem;
+	color: #27ae60;
+}
+
+/**** #.user-nickname ****/
+.user-nickname {
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+	color: #3498db;
+	font-weight: 700;
+}
+
+
+/**** #.user-info__list ****/
+.user-info__list {
+	list-style: none;
+	font-size: 24px;
+	font-size: 1.5rem;
+	color: #000000;
+	font-weight: 700;
+}
+
+/**** #.user-list__item span ****/
+.user-list__item span {
+	color: #7f8c8d;
+	font-weight: 400;
+}
+
+
+/**** #.generate ****/
+.generate {
+	padding: 16px 0;
+	padding: 1rem 0;
+	width: 100%;
+	border: none;
+	font-size: 28.8px;
+	font-size: 1.8rem;
+	font-family: inherit;
+	color: #ffffff;
+	background-color: #27ae60;
+	cursor: pointer;
+}
+
+@media (min-width:500px) {
+	.user-wrap {
+		padding: 2rem;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-justify-content: space-around;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+
+	.user-info__list {
+		font-size: 1.8rem;
+	}
+
+	.generate {
+		padding: 2rem 0;
+		font-size: 3rem;
+	}
+}
