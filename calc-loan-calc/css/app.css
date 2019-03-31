@@ -1,0 +1,205 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	background-color: #252525;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+.btn {
+	font-family: inherit;
+	font-size: 2rem;
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	transition: .2s ease-in;
+	border: none;
+	border-radius: .5rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.calc-desc ****/
+.calc-desc {
+	font-size: 1.8rem;
+	line-height: 1.2;
+	max-width: 45rem;
+	margin: 2rem auto;
+	padding: 1rem;
+	border-left: 6px solid #252525;
+}
+
+/**** #.content ****/
+.content {
+	width: 100%;
+	max-width: 60rem;
+	margin: auto;
+	margin-top: 5%;
+	padding: 2rem;
+	border-radius: .5rem;
+	background-color: #fff;
+	box-shadow: 0 0 14rem 2px #000;
+}
+
+/**** #.calc-head ****/
+.calc-head,
+.result-head {
+	font-size: 4rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	color: #2c3e50;
+}
+
+/**** #.form-field ****/
+.form-field {
+	display: flex;
+	width: 100%;
+	max-width: 45rem;
+	margin: auto;
+	margin-bottom: 1.5rem;
+}
+
+/**** #.ico ****/
+.ico {
+	font-weight: 700;
+	display: inline-block;
+	width: 8rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: #b3b2b2;
+}
+
+/**** #.ico_text ****/
+.ico_text {
+	font-size: 2rem;
+	width: 40rem;
+}
+
+/**** #.form-input ****/
+.form-input {
+	font-family: inherit;
+	font-size: 2.2rem;
+	width: 100%;
+	padding: 1rem;
+	transition: border-color .3s ease-in-out;
+	border: 2px solid #b3b2b2;
+}
+
+.form-input:focus {
+	border-color: #686de0;
+	outline: none;
+}
+
+/**** #.submit-btn ****/
+.submit-btn {
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 1.5rem 2rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #34495e;
+}
+
+.submit-btn:hover {
+	background-color: #747d8c;
+}
+
+/**** #.calc-result ****/
+.calc-result {
+	display: none;
+}
+
+/**** #.calc-loader ****/
+.calc-loader {
+	display: none;
+	max-width: 30rem;
+	margin: auto;
+}
+
+/**** #.error-message ****/
+.error-message {
+	font-size: 2rem;
+	font-weight: 700;
+	display: none;
+	width: 100%;
+	max-width: 45rem;
+	margin: 1.5rem auto;
+	padding: 1rem 2rem;
+	text-align: center;
+	color: #d63031;
+	border: 2px solid #d63031;
+	background-color: #fab1a0;
+}
