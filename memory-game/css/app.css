@@ -1,0 +1,230 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto Condensed', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: #1B9CFC;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.heading ****/
+.heading {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	color: #8d6c9f;
+	font-size: 2.3rem;
+	background-color: #f9dd8f;
+	-webkit-box-shadow: 0 0 2rem #74b9ff;
+	box-shadow: 0 0 2rem #74b9ff;
+}
+
+@media (min-width: 600px) {
+	.heading {
+		font-size: 4rem;
+	}
+}
+
+/**** #.card ****/
+.card {
+	display: -ms-grid;
+	display: grid;
+	width: 100%;
+	max-width: 60rem;
+	max-height: 43rem;
+	margin-bottom: 2rem;
+	-ms-grid-columns: (minmax(6rem, 1fr))[4];
+	grid-template-columns: repeat(4, minmax(6rem, 1fr));
+	-ms-grid-rows: (minmax(8rem, 1fr))[3];
+	grid-template-rows: repeat(3, minmax(8rem, 1fr));
+	grid-gap: 1rem;
+	-webkit-perspective: 100rem;
+	perspective: 100rem;
+}
+
+@media (min-width: 450px) {
+	.card {
+		height: 100%;
+		-ms-grid-rows: (minmax(10rem, 1fr))[3];
+		grid-template-rows: repeat(3, minmax(10rem, 1fr));
+	}
+}
+
+@media (min-width: 600px) {
+	.card {
+		-ms-grid-columns: (minmax(10rem, 1fr))[4];
+		grid-template-columns: repeat(4, minmax(10rem, 1fr));
+		-ms-grid-rows: (minmax(13rem, 1fr))[3];
+		grid-template-rows: repeat(3, minmax(13rem, 1fr));
+	}
+}
+
+/**** #.card-item ****/
+.card-item {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 1px 2rem 1px rgba(0, 0, 0, .3);
+	box-shadow: 1px 1px 2rem 1px rgba(0, 0, 0, .3);
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+
+.card-item:active {
+	-webkit-transform: scale(.96);
+	-ms-transform: scale(.96);
+	transform: scale(.96);
+}
+
+
+/**** #.card-back ****/
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	width: 100%;
+	height: 100%;
+	height: 100%;
+	background-color: #74b9ff;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/**** #.card-front ****/
+.card-back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/**** #.flip ****/
+.flip {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/**** #.refresh ****/
+.refresh {
+	font-family: inherit;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 1.5rem;
+	cursor: pointer;
+	-webkit-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+	color: #8d6c9f;
+	border: none;
+	background-color: #f9dd8f;
+}
+
+.refresh:hover {
+	background-color: #faefde;
+}

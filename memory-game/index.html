@@ -1,0 +1,104 @@
+<!--================================================
+ * @author Alim Nagoev
+ * @license https://github.com/developer-nagoev
+ ================================================-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic" as="fetch" crossorigin="anonymous">
+	<script type="text/javascript">
+	!function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage);
+	</script>
+	<!-- End of code snippet for Google Fonts -->
+	
+	<link rel="stylesheet" href="css/app.css">
+	<title>Memory Game</title>
+</head>
+
+<body>
+	<!-- ========================== * 
+		APP CONTENT
+	* ============================ -->
+	<h1 class="heading">Memory Game</h1>
+
+	<div class="card">
+		<!-- ======================================= -->
+		<div class="card-item" data-name="cat">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/cat.png" alt="cat">
+		</div>
+		<div class="card-item" data-name="cat">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/cat.png" alt="cat">
+		</div>
+		<!-- ======================================= -->
+		<div class="card-item" data-name="dog">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/dog.png" alt="dog">
+		</div>
+		<div class="card-item" data-name="dog">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/dog.png" alt="dog">
+		</div>
+		<!-- ======================================= -->
+		<div class="card-item" data-name="cow">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/cow.png" alt="cow">
+		</div>
+		<div class="card-item" data-name="cow">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/cow.png" alt="cow">
+		</div>
+		<!-- ======================================= -->
+		<div class="card-item" data-name="sheep">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/sheep.png" alt="sheep">
+		</div>
+		<div class="card-item" data-name="sheep">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/sheep.png" alt="sheep">
+		</div>
+		<!-- ======================================= -->
+		<div class="card-item" data-name="pig">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/pig.png" alt="pig">
+		</div>
+		<div class="card-item" data-name="pig">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/pig.png" alt="pig">
+		</div>
+		<!-- ======================================= -->
+		<div class="card-item" data-name="chicken">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/chicken.png" alt="chicken">
+		</div>
+		<div class="card-item" data-name="chicken">
+			<img class="card-front" src="images/house.png" alt="front">
+			<img class="card-back" src="images/chicken.png" alt="chicken">
+		</div>
+		<!-- ======================================= -->
+	</div>
+
+	<button class="refresh">Play Again</button>
+
+	<!-- ========================== * 
+		GITHUB LINK
+	* ============================ -->
+	<a class="github" target="_blank" href="https://github.com/developer-nagoev" title="Fork me on Github">
+		<img src="images/github.png" alt="GitHub Ico">
+	</a>
+	<!-- ========================== * 
+		APP SCRIPTS
+	* ============================ -->
+	<script src="scripts/app.js"></script>
+</body>
+
+</html>
