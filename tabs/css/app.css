@@ -1,0 +1,188 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto Condensed', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+
+	position: relative;
+
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+
+	color: #000;
+	padding: 2rem 1rem;
+	background-color: rgb(214, 224, 248);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.tabs ****/
+.tabs {
+	max-width: 960px;
+	max-width: 60rem;
+	margin: auto;
+}
+
+/**** #.tabs-control ****/
+.tabs-control {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/**** #.tabs-control__item ****/
+.tabs-control__item {
+	padding: 24px;
+	padding: 1.5rem;
+	background-color: aliceblue;
+	border: none;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	font-size: 28.8px;
+	font-size: 1.8rem;
+	color: #ffffff;
+}
+
+.tabs-control__item:focus {
+	outline: none;
+}
+
+.tabs-control__item:first-child {
+	background-color: #3171FE;
+}
+
+.tabs-control__item:nth-child(2) {
+	background-color: #FF5855;
+}
+
+.tabs-control__item:last-child {
+	background-color: #FC7959;
+}
+
+.tabs-control__item.selected,
+.tabs-control__item.tabs-control__item:hover {
+	background-color: #FBFBFF;
+	color: #000000;
+}
+
+.tabs-content__list {
+	position: relative;
+}
+
+.tabs-content__item {
+	background-color: #FBFBFF;
+	min-height: 240px;
+	min-height: 15rem;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 16px;
+	padding: 1rem;
+	z-index: -1;
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-webkit-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+}
+
+.tabs-content__item.selected {
+	z-index: 3;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-webkit-box-shadow: 0 .4rem .2rem -0.2rem gray;
+	box-shadow: 0 .4rem .2rem -0.2rem gray;
+}
+
+@media (min-width:400px) {
+	.tabs-control {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media (min-width:600px) {
+	.tabs-content__item {
+		padding: 2rem;
+	}
+}
+
+
