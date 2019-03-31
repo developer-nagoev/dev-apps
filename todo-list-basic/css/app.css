@@ -1,0 +1,478 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+/**====================**
+* FONTS LINKS
+**====================**/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Source Sans Pro', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+
+	position: relative;
+
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+
+	color: #000;
+	background-color: #dadada;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.tasks ****/
+.tasks {
+	max-width: 60rem;
+	margin: auto;
+	margin-top: 5%;
+	padding: 0rem 1rem;
+}
+
+/**** #.tasks-header ****/
+.tasks-header,
+.tasks-body {
+	padding: 1rem;
+	margin-bottom: 2rem;
+	-webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+
+	box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+	background-color: #fff;
+}
+
+/**** #.tasks-title ****/
+.tasks-title {
+	font-size: 3rem;
+	font-weight: 700;
+
+	margin-bottom: 3rem;
+
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/**** #.form-field****/
+.form-field {
+	position: relative;
+
+	display: -webkit-box;
+
+	display: -webkit-flex;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	margin-bottom: 2rem;
+}
+
+/**** #.task-input ****/
+.task-input {
+	font-family: inherit;
+	font-size: 1.5rem;
+
+	padding: 0.5rem;
+
+	border: none;
+	border-bottom: 3px solid rgba(0, 0, 0, .2);
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.task-input:focus {
+	border-bottom: 3px solid #00b894;
+	outline: none;
+}
+
+.task-input_invalid {
+	border-bottom: 3px solid #d63031;
+}
+
+.task-input:valid+.tasks-label,
+.task-input:focus+.tasks-label {
+	color: #00b894;
+	font-size: 75%;
+
+	-webkit-transform: translate3d(0, -100%, 0);
+
+	transform: translate3d(0, -100%, 0);
+
+	opacity: 1;
+}
+
+/**** #.tasks-label ****/
+.tasks-label {
+	position: absolute;
+	top: 0;
+
+	padding: .7rem 1rem;
+
+	-webkit-transition: all .3s ease;
+
+	-o-transition: all .3s ease;
+
+	transition: all .3s ease;
+
+	opacity: .5;
+}
+
+/**** #.tasks-btn ****/
+.tasks-btn,
+.tasks-clear {
+	width: 100%;
+	text-align: center;
+	font-family: inherit;
+	font-size: 1.3rem;
+
+	display: inline-block;
+
+	padding: 1.3rem 1.5rem;
+
+	cursor: pointer;
+	-webkit-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	text-transform: uppercase;
+
+	color: #fff;
+	border: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #4fd6b0;
+}
+
+.tasks-btn:focus,
+.tasks-clear:focus {
+	outline: none;
+}
+
+.tasks-btn:hover,
+.tasks-clear:hover {
+	background-color: #00b894;
+	-webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25);
+}
+
+/**** #.body-title ****/
+.body-title {
+	font-size: 2rem;
+	font-weight: 700;
+
+	margin-bottom: 3rem;
+
+	text-align: left;
+}
+
+/**** #.tasks-list ****/
+.tasks-list {
+	margin-bottom: 2rem;
+
+	border-bottom: 2px solid rgba(0, 0, 0, .25);
+}
+
+/**** #.task-list__item ****/
+.task-list__item {
+	font-size: rem;
+	position: relative;
+	max-width: 100%;
+	padding: .9rem 4rem .9rem 1rem;
+	overflow-wrap: break-word;
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+.task-list__link {
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+
+	-webkit-transition: .3s ease;
+
+	-o-transition: .3s ease;
+
+	transition: .3s ease;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.task-list__item i:hover {
+	cursor: pointer;
+
+	color: #d63031;
+	text-shadow: 0 0 2rem #d63031;
+}
+
+/**** #.tasks-clear ****/
+.tasks-clear {
+	background-color: #2d3436;
+}
+
+.tasks-clear:hover {
+	background-color: #2d3436;
+}
+
+
+/*============================
+	MODAL BOX
+============================*/
+
+/**** #.overlay ****/
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+	z-index: 10;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/**** #.confirm-modal ****/
+.confirm-modal {
+	max-width: 30rem;
+	width: 100%;
+	min-height: 15rem;
+	padding-top: 2rem;
+	background-color: #fff;
+	-webkit-animation: fadeInDown 1s ease;
+	animation: fadeInDown 1s ease;
+	box-shadow: 0 0 7rem 0 #000;
+}
+
+/**** #.confirm-title ****/
+.confirm-title {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+/**** #.confirm-buttons ****/
+.confirm-buttons {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	max-width: 25rem;
+	width: 100%;
+	margin: auto;
+}
+
+/**** #.confirm-btn ****/
+.confirm-btn {
+	display: inline-block;
+	padding: 1rem;
+	border: none;
+	font-family: inherit;
+	font-size: 1.5rem;
+	font-weight: 400;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	color: #ffffff;
+	cursor: pointer;
+	width: 48%;
+
+}
+
+.confirm-btn:hover {
+	-webkit-box-shadow: 0 1rem 5rem rgba(0, 0, 0, .2);
+	box-shadow: 0 1rem 5rem rgba(0, 0, 0, .6);
+}
+
+/**** #.yes-btn ****/
+.yes-btn {
+	background-color: #e74c3c;
+}
+
+/**** #.no-btn ****/
+.no-btn {
+	background-color: #27ae60;
+}
+
+
+/*============================
+	ANIMATION
+============================*/
+@-webkit-keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+/* link for GitHub */
+
+/**** #.fa-github ****/
+.fa-github {
+	position: absolute;
+	right: 3rem;
+	bottom: 3rem;
+	font-size: 5rem;
+	color: #000000;
+	transition: all 0.4s ease;
+}
+
+.fa-github:hover {
+	text-shadow: 0 0 1rem rgba(0, 0, 0, .8);
+}
+
+@media (min-width: 600px) {
+
+	/**** #.tasks-title ****/
+	.tasks-title {
+		font-size: 4rem;
+	}
+
+	/**** #.body-title ****/
+	.body-title {
+		font-size: 3rem;
+	}
+
+	/**** #.task-input ****/
+	.task-input {
+		font-size: 2.2rem;
+		padding: 1rem 2rem;
+	}
+
+	/**** #.tasks-btn ****/
+	.tasks-btn,
+	.tasks-clear {
+		font-size: 2rem;
+		padding: 1.5rem 2rem;
+	}
+
+	/**** #.confirm-modal ****/
+	.confirm-modal {
+		max-width: 45rem;
+		padding: 3rem;
+	}
+
+	/**** #.confirm-title ****/
+	.confirm-title {
+		font-size: 3rem;
+	}
+
+	/**** #.confirm-buttons ****/
+	.confirm-buttons {
+		max-width: 35rem;
+	}
+
+	/**** #.confirm-btn ****/
+	.confirm-btn {
+		padding: 1.5rem 2rem;
+		font-size: 2rem;
+	}
+
+}
