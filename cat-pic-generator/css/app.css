@@ -1,0 +1,169 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Oswald', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	padding-top: 5%;
+	background-color: #130f40;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.content ****/
+.content {
+	max-width: 90rem;
+	margin: auto;
+	padding: 0rem 1rem;
+}
+
+/**** #.content-heading ****/
+.content-heading {
+	margin-bottom: 2rem;
+}
+
+/**** #.content-item ****/
+.content-item {
+	margin: auto;
+	padding: 2rem;
+	text-align: center;
+	border: 1px solid #bdbdbd;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+	background-color: #fff;
+}
+
+/**** #.content-inner ****/
+.content-inner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/**** #.loader ****/
+.loader {
+	display: none;
+	max-width: 20rem;
+	margin: auto;
+}
+.loader img {
+	max-width: 60rem;
+	width: 100%;
+}
+/**** #.btn ****/
+.btn {
+	font-family: inherit;
+	font-size: 1.9rem;
+	display: inline-block;
+	margin-bottom: 2rem;
+	padding: 1rem;
+	-webkit-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+	text-align: center;
+	border: none;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #9ccc65;
+	-webkit-flex-basis: 48%;
+	-ms-flex-preferred-size: 48%;
+	flex-basis: 48%;
+	box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.59);
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #7cb342;
+}
+
+.btn:active {
+	box-shadow: 0px 0 0 rgba(0, 0, 0, 0.59);
+	transform: translateY(3px);
+}
+
+.btn:focus {
+	outline: none;
+}
+
+/**** #.wrong ****/
+.wrong {
+	color: #ff7043;
+}
