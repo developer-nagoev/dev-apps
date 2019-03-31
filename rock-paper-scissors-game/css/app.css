@@ -1,0 +1,294 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+/**====================**
+* FONTS LINKS
+**====================**/
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+		url('../fonts/Gilroy-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+		url('../fonts/Gilroy-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+		url('../fonts/Gilroy-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Black.woff2') format('woff2'),
+			url('../fonts/Gilroy-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: fallback;
+}
+
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Gilroy', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	background-color: #1b1d20;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.header ****/
+.header {
+	padding: 32px 0px;
+	padding: 2rem 0rem;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
+	background-color: #fff;
+	text-align: center;
+}
+
+/**** #.game-heading ****/
+.game-heading {
+	font-weight: 900;
+}
+
+/**** #.game-score ****/
+.game-score {
+	max-width: 320px;
+	max-width: 20rem;
+	margin: auto;
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+	padding: 32px;
+	padding: 2rem;
+	position: relative;
+	color: #ffffff;
+	border: 2px solid #fff;
+	text-align: center;
+	font-size: 64px;
+	font-size: 4rem;
+}
+
+/**** #.game-flag ****/
+.game-flag {
+	position: absolute;
+	display: block;
+	padding: 8px;
+	padding: 0.5rem;
+	top: 50%;
+	left: -26.56px;
+	left: -1.66rem;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 19.2px;
+	font-size: 1.2rem;
+	background-color: #ff7675;
+}
+
+/**** #.computer-flag ****/
+.computer-flag {
+	left: auto;
+	right: -36.8px;
+	right: -2.3rem;
+}
+
+/**** #.game-message ****/
+.game-message {
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+	font-size: 35.2px;
+	font-size: 2.2rem;
+	font-weight: 900;
+	color: #ffffff;
+	text-align: center;
+}
+
+/**** #.game-move ****/
+.game-move {
+	max-width: 640px;
+	max-width: 40rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: auto;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
+}
+
+/**** #.move-item ****/
+.move-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 153.6px;
+	width: 9.6rem;
+	height: 153.6px;
+	height: 9.6rem;
+	cursor: pointer;
+}
+
+.move-item img {
+	width: 80%;
+}
+
+/**** #.footer-message ****/
+.footer-message {
+	text-align: center;
+	color: #ffffff;
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+
+/**** #.small-info ****/
+.small-info {
+	font-size: 19.2px;
+	font-size: 1.2rem;
+	font-weight: 900;
+	-webkit-transform: translateY(5px);
+	-ms-transform: translateY(5px);
+	transform: translateY(5px);
+	display: inline-block;
+}
+
+.win {
+	border: 2px solid #55efc4;
+	-webkit-box-shadow: 0 0 2rem #55efc4;
+	box-shadow: 0 0 2rem #55efc4;
+}
+
+.lose {
+	border: 2px solid #d63031;
+	-webkit-box-shadow: 0 0 2rem #d63031;
+	box-shadow: 0 0 2rem #d63031;
+}
+
+.draw {
+	border: 2px solid #b2bec3;
+	-webkit-box-shadow: 0 0 2rem #b2bec3;
+	box-shadow: 0 0 2rem #b2bec3;
+}
+
+.end-game .game-move{
+	display: none;
+}
+.end-game .game-message{
+	font-size: 42px;
+	font-size: 4.2rem;
+	text-shadow: 0px 0px 4px #fff;
+}
+
+.repeat {
+	display: block;
+	max-width: 200px;
+	width: 100%;
+	margin: 50px auto 0;
+	border: 0;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 12px;
+	font-weight: 700;
+	background-color: #155fe7;
+	cursor: pointer;
+	display: none;
+}
