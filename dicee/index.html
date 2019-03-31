@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Oswald:400,700" as="fetch"
+		crossorigin="anonymous">
+	<script >
+		! function (e, n, t) {
+			"use strict";
+			var o = "https://fonts.googleapis.com/css?family=Oswald:400,700",
+				r = "__3perf_googleFontsStylesheet";
+
+			function c(e) {
+				(n.head || n.body).appendChild(e)
+			}
+
+			function a() {
+				var e = n.createElement("link");
+				e.href = o, e.rel = "stylesheet", c(e)
+			}
+
+			function f(e) {
+				if (!n.getElementById(r)) {
+					var t = n.createElement("style");
+					t.id = r, c(t)
+				}
+				n.getElementById(r).innerHTML = e
+			}
+			e.FontFace && e.FontFace.prototype.hasOwnProperty("display") ? (t[r] && f(t[r]), fetch(o).then(function (e) {
+				return e.text()
+			}).then(function (e) {
+				return e.replace(/@font-face {/g, "@font-face{font-display:swap;")
+			}).then(function (e) {
+				return t[r] = e
+			}).then(f).catch(a)) : a()
+		}(window, document, localStorage);
+	</script>
+	<!-- End of code snippet for Google Fonts -->
+	<link rel="stylesheet" href="css/index.css">
+	<title>Dicee</title>
+</head>
+
+<body>
+	<!-- App -->
+	<div class="app">
+		<!-- App Head -->
+		<h1 class="app__head">Refresh Me</h1>
+		<!-- App list -->
+		<ul class="app__list">
+			<!-- App item -->
+			<li class="app__item app-item">
+				<h4 class="app-item__name">Player 1</h4>
+				<img class="app-item__image app-item__image_first" src="img/dice1.png" alt="Players Cube">
+			</li>
+			<!-- App item -->
+			<li class="app__item app-item">
+				<h4 class="app-item__name">Player 2</h4>
+				<img class="app-item__image app-item__image_second" src="img/dice1.png" alt="Players Cube">
+			</li>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script src="js/app.js"></script>
+</body>
+
+</html>
