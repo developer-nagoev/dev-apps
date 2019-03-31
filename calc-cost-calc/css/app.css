@@ -1,0 +1,233 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+/**====================**
+* FONTS LINKS
+**====================**/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic");
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto Condensed', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: 5% 1rem 0 1rem;
+	color: #000;
+	background-color: #303552;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+.content {
+	max-width: 60rem;
+	margin: auto;
+	padding: 2rem;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 2rem #222;
+	box-shadow: 0 0 2rem #222;
+}
+
+/**** #.heading ****/
+.heading {
+	font-size: 2.2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+@media (min-width: 500px) {
+	.heading {
+		font-size: 4rem;
+	}
+}
+
+/**** #.form-group ****/
+.form-group {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5rem;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+/**** #.form-label ****/
+.form-label {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 500px) {
+	.form-label {
+		font-size: 1.8rem;
+	}
+}
+
+/**** #.form-input ****/
+.form-input {
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+
+/**** #.price-input ****/
+.price-input {
+	border: 2px solid #d3d3d3;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+}
+
+/**** #.range-input ****/
+.range-input {
+	width: 100%;
+	height: 1rem;
+	-webkit-transition: .2s;
+	-webkit-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	opacity: .7;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	outline: none;
+	background-color: #d3d3d3;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.range-input:hover {
+	opacity: 1;
+}
+
+.range-input::-webkit-range-input-thumb {
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+	background-color: #303552;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.range-input::-webkit-slider-thumb {
+	width: 2.3rem;
+	height: 2.4rem;
+	cursor: pointer;
+	border: 0;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #303552;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.range-input::-moz-range-thumb {
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+	background-color: #303552;
+}
+
+/**** #.result ****/
+.result {
+	font-size: 5rem;
+	font-weight: 700;
+	text-align: right;
+}
+
+/**** #.quantity-count ****/
+.quantity-count {
+	font-weight: 700;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	width: 3rem;
+	height: 3rem;
+	margin-top: 1rem;
+	text-align: center;
+	color: #fff;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #303952;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
