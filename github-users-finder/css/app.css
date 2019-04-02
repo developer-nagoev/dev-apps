@@ -1,0 +1,466 @@
+/*=========================
+* @author Alim Nagoev
+* @license https://github.com/developer-nagoev
+=========================*/
+
+/**====================**
+* BASE SETTINGS
+**====================**/
+html {
+	font-size: 62.5%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Roboto Condensed', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	position: relative;
+	min-height: 100vh;
+	margin: inherit;
+	padding: inherit;
+	color: #000;
+	background-color: #f1f2f6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	vertical-align: middle;
+}
+
+button,
+a,
+input,
+textarea {
+	font-family: inherit;
+}
+
+.github {
+	position: absolute;
+	right: 30px;
+	right: 3rem;
+	bottom: 30px;
+	bottom: 3rem;
+	width: 60px;
+	width: 6rem;
+}
+
+/**====================**
+* APP SETTINGS
+**====================**/
+/**** #.app-header ****/
+.app-header {
+	font-size: 20px;
+	font-size: 2rem;
+
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 20px 0px;
+	padding: 2rem 0rem;
+
+	text-align: center;
+
+	color: #fff;
+	background-color: #3a454c;
+}
+
+/**** #.app-main ****/
+.app-main {
+	padding: 0px 10px;
+	padding: 0rem 1rem;
+}
+
+.app-main .content {
+	max-width: 1200px;
+	max-width: 120rem;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 20px;
+	padding: 2rem;
+
+	border: 1px solid #ccd1d3;
+	-webkit-border-radius: .3rem;
+	border-radius: .3rem;
+	background-color: #fff;
+}
+
+/**** #.app-head ****/
+.app-head {
+	font-size: 29px;
+	font-size: 2.9rem;
+
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+
+	text-align: center;
+}
+
+/**** #.app-desc ****/
+.app-desc {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 300;
+
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+}
+
+/**** #.app-input ****/
+.app-input {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: 300;
+
+	width: 100%;
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 10px;
+	padding: 1rem;
+
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+
+	border: 2px solid #ccd1d3;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+}
+
+.app-input:focus {
+	border: 2px solid #0984e3;
+	outline: 0;
+}
+
+/**** #.app-output ****/
+
+/**** #.output-header ****/
+.output-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+/**** #.output-body ****/
+.output-body {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
+/**** #.content_top ****/
+.content_bottom {
+	display: none;
+}
+
+/**** #.output-image ****/
+.output-image {
+	width: 100%;
+	max-width: 350px;
+	max-width: 35rem;
+	max-height: 350px;
+	max-height: 35rem;
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+}
+
+/**** #.output-view ****/
+.output-view {
+	font-size: 18px;
+	font-size: 1.8rem;
+
+	display: block;
+
+	width: 100%;
+	max-width: 350px;
+	max-width: 35rem;
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+	padding: 15px 10px;
+	padding: 1.5rem 1rem;
+
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	text-align: center;
+
+	color: #fff;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+	background-color: #0984e3;
+}
+
+.output-view:hover {
+	background-color: #0d4d7f;
+}
+
+/**** #.output-list ****/
+.output-list {
+	display: -ms-grid;
+	display: grid;
+
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	grid-gap: .5rem;
+}
+
+/**** #.output-info ****/
+.output-info {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+
+	border: 1px solid #ccd1d3;
+	border-bottom: transparent;
+	-webkit-border-radius: .3rem;
+	border-radius: .3rem;
+
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+/**** #.output-list__item  ****/
+.output-list__item {
+	margin-bottom: 5px;
+	margin-bottom: .5rem;
+	padding: 5px 10px;
+	padding: .5rem 1rem;
+
+	text-align: center;
+
+	color: #fff;
+	-webkit-border-radius: .3rem;
+	border-radius: .3rem;
+}
+
+.output-list__item_repos {
+	background-color: #1e90ff;
+}
+
+.output-list__item_gist {
+	background-color: #636e72;
+}
+
+.output-list__item_followers {
+	background-color: #27ae60;
+}
+
+.output-list__item_following {
+	background-color: #2c3e50;
+}
+
+/**** #.output-info__item ****/
+.output-info__item {
+	padding: 10px;
+	padding: 1rem;
+
+	border-bottom: 1px solid #ccd1d3;
+}
+
+/**** #.error ****/
+.error {
+	padding: 15px 20px;
+	padding: 1.5rem 2rem;
+
+	color: #fff;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
+	background-color: #e74c3c;
+}
+
+/**** #.output-head ****/
+.output-head {
+	font-size: 25px;
+	font-size: 2.5rem;
+
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
+/**** #.output-row ****/
+.output-row {
+	display: -ms-grid;
+	display: grid;
+
+	padding: 10px;
+	padding: 1rem;
+
+	border: 1px solid #ccd1d3;
+
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+}
+
+/**** #.output-col__link ****/
+.output-col__link {
+	display: block;
+
+	padding: 10px;
+	padding: 1rem;
+
+	text-align: center;
+}
+
+/**** #.col-list ****/
+
+/**** #.col-list__item ****/
+.col-list__item {
+	max-width: 190px;
+	max-width: 19rem;
+	margin: auto;
+	margin-bottom: 5px;
+	margin-bottom: .5rem;
+	padding: 5px 10px;
+	padding: .5rem 1rem;
+
+	text-align: center;
+
+	color: #fff;
+	-webkit-border-radius: .3rem;
+	border-radius: .3rem;
+}
+
+.col-list__item:first-child {
+	background-color: #1e90ff;
+}
+
+.col-list__item:nth-child(2) {
+	background-color: #636e72;
+}
+
+.col-list__item:last-child {
+	background-color: #2c3e50;
+}
+
+@media (min-width: 500px) {
+
+	.app-header {
+		font-size: 3rem;
+	}
+
+	.app-head {
+		font-size: 3.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.app-desc {
+		font-size: 2.5rem;
+	}
+
+	.output-list {
+		-ms-grid-columns: (1fr)[2];
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+	}
+
+	.output-row {
+		-ms-grid-columns: (1fr)[2];
+		grid-template-columns: repeat(2, 1fr);
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		-ms-grid-row-align: center;
+		align-items: center;
+	}
+
+	.output-col__link {
+		font-size: 2rem;
+		text-align: left;
+	}
+
+	.col-list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	.col-list__item {
+		font-size: 2rem;
+		margin: 0;
+		margin-right: 1rem;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	.app-head {
+		font-size: 5rem;
+		margin-bottom: 2.5rem;
+	}
+}
+
+@media (min-width: 800px) {
+
+	.app-output {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 2fr;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 1.5rem;
+	}
+
+	.output-list {
+		-ms-grid-columns: (1fr)[4];
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.output-head {
+		font-size: 3rem;
+	}
+}
+
+@media (min-width: 600px) {
+
+	.github {
+		width: 8rem;
+	}
+}
