@@ -1,0 +1,385 @@
+@import url('https://cdn.jsdelivr.net/npm/dev-nagoev@1.0.0/reset.css');
+@import 'global';
+
+body {
+	margin: 0;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	@include fluidFontSize(16px, 18px, 320px, 1200px, 18px);
+}
+
+.container {
+	max-width: 114rem;
+	width: 100%;
+	margin: auto;
+	padding: 0rem 1.5%;
+}
+
+.btn {
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 1.3rem 1rem;
+	text-align: center;
+	border-radius: 0.3rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	background-color: #33C3F0;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: rgb(61, 165, 197);
+	}
+}
+
+.header {
+	padding: 1.5rem 0rem;
+	position: relative;
+	z-index: 10;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.cart {
+	position: relative;
+	transform: translateY(1rem);
+	margin-bottom: 1rem;
+
+	&:hover &__wrapper {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__clear {
+		display: block;
+		border-radius: 0.3rem;
+		border: 1px solid rgba(34, 34, 34, 0.438);
+		color: rgba(34, 34, 34, 1);
+		text-transform: uppercase;
+		text-align: center;
+		padding: 1.3rem 1rem;
+		margin-top: 1.5rem;
+	}
+
+	&__wrapper {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 30;
+		background-color: white;
+		@include fluid('padding', (320px:15px, 1200px:20px));
+		min-height: 10rem;
+		@include fluid('min-width', (320px:280px, 1200px:300px));
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.2s ease-in-out;
+	}
+}
+
+.table {
+	display: block;
+	width: 100%;
+
+	&-header {
+		display: block;
+
+		&__row {
+			padding-bottom: 1.2rem;
+			margin-bottom: 2rem;
+			border-bottom: 1px solid rgba(34, 34, 34, 0.267);
+		}
+	}
+
+	&-body {
+		display: block;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(34, 34, 34, 0.267);
+	}
+
+	&__th {
+		width: 25%;
+		display: block;
+		font-weight: 400;
+		font-size: 1.3rem;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	&__col {
+		width: 25%;
+		padding: 1%;
+
+		&:nth-child(2) {
+			@include fluidFontSize(10px, 14px, 320px, 1200px, 14px);
+		}
+
+		&:nth-child(3) {
+			text-align: center;
+			font-weight: 700;
+		}
+
+		&:nth-child(4) {
+			text-align: center;
+		}
+	}
+}
+
+.delete {
+	@include fluidFontSize(28px, 32px, 320px, 1200px, 32px);
+	font-weight: 400;
+	color: rgb(204, 51, 51);
+	flex-shrink: 0;
+}
+
+.logo,
+.cart-icon {
+	display: block;
+	width: 4rem;
+}
+
+
+.promo {
+	@include fluid('padding-top', (320px:100px, 1200px:230px));
+	@include fluid('padding-bottom', (320px:100px, 1200px:230px));
+	background: url('../images/hero.jpg') no-repeat center/cover;
+	position: relative;
+	z-index: 2;
+	color: #ffffff;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background-color: rgba(34, 34, 34, 0.6);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&__head {
+		@include fluidFontSize(25px, 55px, 320px, 1200px, 55px);
+		text-transform: uppercase;
+		@include fluid('margin-bottom', (320px:15px, 1200px:30px));
+	}
+
+	&__special {
+		@include fluid('margin-bottom', (320px:15px, 1200px:30px));
+		font-size: 1.4rem;
+	}
+
+}
+
+.form {
+	display: flex;
+	max-width: 35rem;
+	width: 100%;
+	position: relative;
+
+	&__label {
+		display: block;
+		width: 100%;
+	}
+
+	&__field {
+		color: #333333;
+		font-size: 1.3rem;
+		padding: 1.2rem 4rem 1.2rem 1rem;
+		width: 100%;
+		background-color: #ffffff;
+	}
+
+	&__submit {
+		flex-shrink: 0;
+		width: 2rem;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 20;
+	}
+
+}
+
+.features {
+	@include fluid('padding-top', (320px:30px, 1200px:60px));
+	@include fluid('padding-bottom', (320px:30px, 1200px:60px));
+	background: linear-gradient(to right, #741d51 0%, #e44e52 100%);
+
+	&-list {
+		display: grid;
+		grid-template-columns: minmax(20rem, 32rem);
+		grid-gap: 3rem 0rem;
+		justify-content: center;
+
+		//media
+		@include sm {
+			grid-template-columns: repeat(3, 32%);
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			color: #ffffff;
+			font-weight: 300;
+		}
+
+		&__icon {
+			width: 4rem;
+			height: 5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+
+.courses {
+	background-color: #fff6f6;
+	@include fluid('padding-top', (320px:30px, 1200px:60px));
+	@include fluid('padding-bottom', (320px:30px, 1200px:60px));
+
+	&__head {
+		@include fluidFontSize(22px, 42px, 320px, 1200px, 42px);
+		text-align: center;
+		@include fluid('margin-bottom', (320px:20px, 1200px:35px));
+	}
+
+	&-list {
+		display: grid;
+		grid-template-columns: 26.5rem;
+		justify-content: center;
+		grid-gap: 3rem 0rem;
+
+		//media
+		@include sm {
+			max-width: 54rem;
+			width: 100%;
+			margin: auto;
+			grid-template-columns: repeat(2, 26.5rem);
+			justify-content: space-between;
+		}
+
+		//media
+		@include md {
+			max-width: 100%;
+			grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+			grid-gap: 3rem;
+		}
+	}
+
+	&-item {
+		background-color: #ffffff;
+		box-shadow: 0px 1px 9px 0px rgba(51, 51, 51, 0.18);
+		border-radius: 0.3rem;
+
+		&__body {
+			@include fluid('padding', (320px:10px, 1200px:15px));
+			display: flex;
+			min-height: calc(42rem - 16rem);
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__image {
+			width: 100%;
+		}
+
+		&__title {
+			font-weight: 500;
+			margin-bottom: 1.2rem;
+		}
+
+		&__prices {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 1.5rem;
+			align-items: center;
+		}
+
+		&__prices-old {
+			text-decoration: line-through;
+		}
+
+		&__prices-new {
+			font-weight: 700;
+		}
+	}
+}
+
+
+.raiting {
+	margin: 1.5rem 0rem;
+
+	&__item {
+		display: flex;
+	}
+
+	&__ico {
+		width: 7%;
+	}
+}
+
+
+.footer {
+	background-color: #fff6f6;
+	border-top: 1px solid #222;
+	@include fluid('padding-top', (320px:30px, 1200px:60px));
+	@include fluid('padding-bottom', (320px:30px, 1200px:60px));
+
+	&-menu {
+		display: grid;
+		grid-gap: 1.5rem;
+		max-width: 52rem;
+		width: 100%;
+
+		//media
+		@include sm {
+			grid-template-columns: repeat(2, 48%);
+			justify-content: space-between;
+		}
+
+		&__link {
+			display: block;
+			color: #33c3f0;
+			transition: all 0.3s ease;
+
+			&:hover,
+			&:focus {
+				color: #2897b9;
+			}
+		}
+	}
+}
+
+.isDisabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+	color: currentColor;
+	pointer-events: none;
+	text-decoration: none;
+	background-color: #a7acae;
+}
+
+// @import url('https://cdn.jsdelivr.net/npm/dev-nagoev@1.0.0/_global.scss');

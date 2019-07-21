@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="images/cart.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap&subset=cyrillic"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/app.css">
+	<title>Shopping cart</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__inner container">
+			<a class="logo">
+				<img src="images/logo.png" alt="Courses logo" class="logo__image">
+			</a>
+			<div class="cart">
+				<a class="cart-icon">
+					<img src="images/cart.png" alt="Cart icon" class="cart-icon__image">
+				</a>
+				<div class="cart__wrapper">
+					<table class="table">
+						<thead class="table-header">
+							<tr class="table__row table-header__row">
+								<th class="table__th">Image</th>
+								<th class="table__th">Name</th>
+								<th class="table__th">Price</th>
+								<th class="table__th"></th>
+							</tr>
+						</thead>
+						<tbody class="table-body"></tbody>
+					</table>
+					<a href="#" class="cart__clear">Clear cart</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="promo">
+		<div class="promo__inner container">
+			<h1 class="promo__head">Learn Something Today</h1>
+			<p class="promo__special">Special Offer, any course $15</p>
+			<form class="form">
+				<label class="form__label" aria-label="Search courses">
+					<input type="text" name="search" class="form__field" required
+						placeholder="What Do You Want To Learn? ">
+				</label>
+				<button type="submit" class="form__submit">
+					<img src="images/search.svg" alt="Search" class="form__submit-ico">
+				</button>
+			</form>
+		</div>
+	</section>
+	<section class="features">
+		<div class="features__inner container">
+			<ul class="features-list">
+				<li class="features-list__item">
+					<div class="features-list__icon">
+						<img src="images/icon1.png" alt="20,000 online courses" class="features-list__image">
+					</div>
+					<p class="features-list__text">
+						20,000 online courses <br>
+						Learn new skills
+					</p>
+				</li>
+				<li class="features-list__item">
+					<div class="features-list__icon">
+						<img src="images/icon2.png" alt="Expert Instructors" class="features-list__image">
+					</div>
+					<p class="features-list__text">
+						Expert Instructors <br>
+						Learn with different teach styles
+					</p>
+				</li>
+				<li class="features-list__item">
+					<div class="features-list__icon">
+						<img src="images/icon3.png" alt="Lifetime access" class="features-list__image">
+					</div>
+					<p class="features-list__text">
+						Lifetime access <br>
+						learn at your own pace
+					</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="courses">
+		<div class="courses__inner container">
+			<h2 class="courses__head">Online Courses</h2>
+			<ul class="courses-list">
+				<li class="courses-item">
+					<img src="images/course1.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">HTML5, CSS3, JavaScript for beginners</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$215</span>
+							<span class="courses-item__prices-new">$20</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="1">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course2.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Cooking Course</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$185</span>
+							<span class="courses-item__prices-new">$12</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="2">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course3.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Guitar for beginners</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$120</span>
+							<span class="courses-item__prices-new">$10</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="3">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course4.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Orchard at home</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$160</span>
+							<span class="courses-item__prices-new">$30</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="4">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course5.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Home Decor with recycled products</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$220</span>
+							<span class="courses-item__prices-new">$45</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="5">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course3.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Build a Music Studio</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$99</span>
+							<span class="courses-item__prices-new">$9</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="6">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course4.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Harvest your own fruits and vegetables</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$240</span>
+							<span class="courses-item__prices-new">$45</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="7">Add to Cart</a>
+					</div>
+				</li>
+				<li class="courses-item">
+					<img src="images/course5.jpg" alt="Courese preview" class="courses-item__image">
+					<div class="courses-item__body">
+						<h3 class="courses-item__title">Cook home cookies</h3>
+						<p class="courses-item__author">Alim Nagoev</p>
+						<ul class="courses-item__raiting raiting">
+							<li class="raiting__item">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+								<img src="images/star.svg" alt="star" class="raiting__ico">
+							</li>
+						</ul>
+						<p class="courses-item__prices">
+							<span class="courses-item__prices-old">$155</span>
+							<span class="courses-item__prices-new">$55</span>
+						</p>
+						<a href="#" class="btn cart-btn courses-item__btn" data-product="8">Add to Cart</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__inner container">
+			<ul class="footer-menu">
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">For Business</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Become an Instructor</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Mobile Applications</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Support</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Help</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">About Us</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Work with us</a>
+				</li>
+				<li class="footer-menu__item">
+					<a href="#" class="footer-menu__link">Blog</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script type="module" src="scripts/new-code/app.js"></script>
+</body>
+
+</html>
