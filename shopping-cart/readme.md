@@ -1,5 +1,5 @@
 ## Shopping cart
-
+[Demo](https://developer-nagoev.github.io/dev-apps/shopping-cart/index.html)
 
 
 **Functionality:**
