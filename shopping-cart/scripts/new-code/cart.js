@@ -1,9 +1,9 @@
 class Cart {
-	storeCheck(store) {
+	storeCheck(store, list) {
 		// check condition to empty local storage
 		if (store.length > 0) {
 			store.forEach(storeItem => {
-				cartList.insertAdjacentHTML('beforeend', `
+				list.insertAdjacentHTML('beforeend', `
 			<tr id="${storeItem.id}">
 				<td class="table__col">
 					<img src="${storeItem.image}" alt="Course image">

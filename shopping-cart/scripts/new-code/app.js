@@ -15,7 +15,7 @@ const cart = new Cart();
 let store = JSON.parse(localStorage.getItem('courses')) || [];
 
 // check condition to empty local storage
-cart.storeCheck(store);
+cart.storeCheck(store, cartList);
 
 // courses list click event
 coursesList.addEventListener('click', e => {
