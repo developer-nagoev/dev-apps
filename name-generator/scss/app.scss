@@ -1,0 +1,105 @@
+@import url('https://cdn.jsdelivr.net/npm/dev-nagoev@1.0.0/reset.css');
+@import 'global';
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	line-height: 1;
+	@include fluidFontSize(16px, 18px, 320px, 1200px, 18px);
+	background-color: rgb(231, 231, 231);
+}
+
+.app {
+	max-width: 50rem;
+	width: 100%;
+	margin: 5rem auto;
+	background-color: #fff;
+	@include fluid('padding', (320px:10px, 1200px:25px));
+}
+
+.title {
+	display: block;
+	color: #000000;
+	margin-top: 5rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	@include fluidFontSize(25px, 35px, 320px, 1200px, 35px);
+
+}
+
+.form {
+	background-color: #fff;
+
+	&__group {
+		margin-bottom: 2rem;
+	}
+
+	&__label {
+		font-weight: 700;
+		margin-bottom: 0.8rem;
+		display: block;
+	}
+
+	select,
+	input {
+		width: 100%;
+		@include fluid('padding', (320px:10px, 1200px:15px));
+	}
+
+
+	.select,
+	input {
+		border: 1px solid rgba(0, 0, 0, 0.438);
+	}
+
+	.btn {
+		background-color: #42ac8e;
+		width: 100%;
+		display: block;
+		@include fluid('padding', (320px:10px, 1200px:15px));
+		text-align: center;
+		color: #ffffff;
+		margin-bottom: 1rem;
+
+		&--gray {
+			background-color: #b2bec3;
+		}
+	}
+}
+
+.generate {
+	display: none;
+
+	&__title {
+		margin-top: 2rem;
+	}
+
+	&-list {
+		margin: auto;
+		width: 100%;
+		background-color: #2d3436;
+		@include fluid('padding', (320px:10px, 1200px:15px));
+		border-radius: 0.5rem;
+
+		&__item {
+			text-align: center;
+			color: #ffffff;
+			margin-bottom: 0.8rem;
+		}
+	}
+}
+
+.message {
+	background-color: #fab1a0;
+	border: 1px solid #d63031;
+	color: #d63031;
+	text-align: center;
+	@include fluid('padding', (320px:10px, 1200px:20px));
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	display: none;
+
+	&--open {
+		display: block;
+	}
+}

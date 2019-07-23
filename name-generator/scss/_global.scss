@@ -1,0 +1,177 @@
+// Dependency functions
+// @import 'list-remove';
+@function list-remove($list, $index) {
+	$newList: ();
+
+	@for $i from 1 through length($list) {
+		@if $i !=$index {
+			$newList: append($newList, nth($list, $i), 'space');
+		}
+	}
+
+	@return $newList;
+}
+
+
+// @import 'list-sort';
+@function list-sort($list) {
+	$sortedlist: ();
+
+	@while length($list)>0 {
+		$value: nth($list, 1);
+
+		@each $item in $list {
+			@if $item < $value {
+				$value: $item;
+			}
+		}
+
+		$sortedlist: append($sortedlist, $value, 'space');
+		$list: list-remove($list, index($list, $value));
+	}
+
+	@return $sortedlist;
+}
+
+
+// @import 'map-sort';
+@function map-sort($map) {
+	$keys: list-sort(map-keys($map));
+	$sortedMap: ();
+
+	@each $key in $keys {
+		$sortedMap: map-merge($sortedMap, ($key: map-get($map, $key)));
+	}
+
+	@return $sortedMap;
+}
+
+
+// @import 'linear-interpolation';
+@function linear-interpolation($map) {
+	$keys: map-keys($map);
+
+	@if (length($keys) !=2) {
+		@error "linear-interpolation() $map must be exactly 2 values";
+	}
+
+	$m: (map-get($map, nth($keys, 2)) - map-get($map, nth($keys, 1)))/(nth($keys, 2) - nth($keys, 1));
+
+	$b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
+	$sign: "+";
+
+	@if ($b < 0) {
+		$sign: "-";
+		$b: abs($b);
+	}
+
+	@return calc(#{$m*100}vw #{$sign} #{$b});
+}
+
+
+@mixin fluid($property, $map) {
+	$length: length(map-keys($map));
+
+	@if ($length < 2) {
+		@error "poly-fluid-sizing() $map requires at least values"
+	}
+
+	$map: map-sort($map);
+	$keys: map-keys($map);
+
+	#{$property}: map-get($map, nth($keys, 1));
+
+	@for $i from 1 through ($length - 1) {
+		@media (min-width:nth($keys, $i)) {
+			$value1: map-get($map, nth($keys, $i));
+			$value2: map-get($map, nth($keys, ($i + 1)));
+
+			@if ($value1 !=$value2) {
+				#{$property}: linear-interpolation((nth($keys, $i): $value1, nth($keys, ($i+1)): $value2));
+			}
+
+			@else {
+				#{$property}: $value1;
+			}
+		}
+	}
+
+	@media (min-width:nth($keys, $length)) {
+		#{$property}: map-get($map, nth($keys, $length));
+	}
+}
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+//Typography Fluid
+@function strip-unit($number) {
+	@if type-of($number)=='number'and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+	$f-min: strip-unit($f-min);
+	$f-max: strip-unit($f-max);
+	$w-min: strip-unit($w-min);
+	$w-max: strip-unit($w-max);
+
+	$k: ($f-max - $f-min)/($w-max - $w-min);
+	$b: $f-min - $k * $w-min;
+
+	$b: $b + $units;
+
+	@return calc(#{$k} * 100vw + #{$b});
+}
+
+//  Mobile First
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+	@media (min-width: #{$screen-sm-min}) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: #{$screen-md-min}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: #{$screen-lg-min}) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
+}
+
+// Typography Fluid
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+
+	font-size: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			font-size: $fallback;
+		}
+
+		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+	}
+
+	@media (min-width: $w-max) {
+		font-size: $f-max;
+	}
+}
