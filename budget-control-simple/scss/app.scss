@@ -1,0 +1,228 @@
+@import url('https://cdn.jsdelivr.net/npm/dev-nagoev@1.0.0/reset.css');
+@import 'global';
+
+body {
+	@include fluidFontSize(16px, 18px, 320px, 1200px, 18px);
+	font-family: 'Rubik', sans-serif;
+	background-color: #212121;
+	color: #ffffff;
+	font-weight: 300;
+	line-height: 1.25;
+}
+
+.lang {
+	display: flex;
+
+	&__link {
+		font-weight: 700;
+		padding: 1rem;
+		color: #ffffff;
+	}
+}
+
+.app {
+	max-width: 90rem;
+	width: 100%;
+	margin: 5rem auto;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	@include fluidFontSize(25px, 45px, 320px, 1200px, 25px);
+	font-weight: 700;
+	@include fluid('margin-bottom', (320px:30px, 1200px:45px));
+
+	&__ico {
+		display: block;
+		@include fluid('margin-left', (320px:10px, 1200px:15px));
+		@include fluid('width', (320px:30px, 1200px:60px));
+	}
+}
+
+.row {
+	display: none;
+	flex-direction: column;
+	background-color: #fcf9ea;
+	color: #212121;
+
+	//media
+	@include md {
+		flex-direction: row;
+		justify-content: space-between;
+
+		&>* {
+			width: 48%;
+
+		}
+	}
+}
+
+.column {
+	@include fluid('padding', (320px:20px, 1200px:30px));
+	border-bottom: 2px solid rgb(124, 123, 123);
+
+	//media
+	@include md {
+		border-bottom: 0;
+	}
+}
+
+.form {
+	&__label {
+		display: block;
+		width: 100%;
+		@include fluid('margin-bottom', (320px:20px, 1200px:35px));
+	}
+
+	&__input {
+		background-color: #ffffff;
+		width: 100%;
+		@include fluid('padding', (320px:10px, 1200px:15px));
+		transition: all 0.3s ease;
+
+		&:disabled {
+			background-color: rgba(188, 188, 188, 0.522);
+			color: rgba(0, 0, 0, 0.377);
+			cursor: not-allowed;
+		}
+
+		&:focus {
+			outline-color: #49beb7;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		display: block;
+		text-align: center;
+		color: #ffffff;
+		background-color: #52575f;
+		border-radius: 0.2rem;
+		font-weight: 400;
+		@include fluid('padding-top', (320px:10px, 1200px:15px));
+		@include fluid('padding-bottom', (320px:10px, 1200px:15px));
+		padding-left: 1rem;
+		padding-right: 1rem;
+
+		&:disabled {
+			background-color: #b0b2b3;
+		}
+	}
+}
+
+.money-form {
+	@include fluid('padding', (320px:20px, 1200px:30px));
+	background-color: #fcf9ea;
+	color: #212121;
+
+	&__label {
+		display: block;
+		font-weight: 400;
+		@include fluidFontSize(20px, 30px, 320px, 1200px, 20px);
+	}
+
+	&__input {
+		background-color: #ffffff;
+		width: 100%;
+		@include fluid('margin-top', (320px:10px, 1200px:15px));
+		@include fluid('padding', (320px:10px, 1200px:15px));
+		transition: all 0.3s ease;
+		@include fluidFontSize(16px, 18px, 320px, 1200px, 18px);
+
+		&:focus {
+			outline-color: #49beb7;
+		}
+	}
+}
+
+.spend-list {
+	max-height: 20rem;
+	overflow-y: auto;
+	padding-right: 1rem;
+	margin-bottom: 2rem;
+
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+}
+
+.spend-item {
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	@include fluid('padding', (320px:10px, 1200px:12px));
+	align-items: center;
+	@include fluid('margin-bottom', (320px:15px, 1200px:20px));
+
+	&__name {
+		font-weight: 400;
+		@include fluidFontSize(10px, 15px, 320px, 1200px, 10px);
+	}
+
+	&__count {
+		@include fluidFontSize(10px, 12px, 320px, 1200px, 10px);
+		@include fluid('padding', (320px:5px, 1200px:8px));
+		border-radius: 0.2rem;
+		background-color: #3e64ff;
+		color: #ffffff;
+	}
+}
+
+.amount__count,
+.left__count {
+	@include fluidFontSize(10px, 12px, 320px, 1200px, 10px);
+	@include fluid('padding', (320px:5px, 1200px:8px));
+	border-radius: 0.2rem;
+	background-color: #3e64ff;
+	color: #ffffff;
+}
+
+.amount,
+.left {
+	@include fluid('padding', (320px:10px, 1200px:15px));
+	color: #212121;
+	display: block;
+}
+
+.amount {
+	display: flex;
+	align-items: center;
+	@include fluid('margin-bottom', (320px:15px, 1200px:20px));
+	background-color: #daf1f9;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	background-color: #7ecfc0;
+
+	&--25 {
+		background-color: #fe5f55;
+	}
+
+	&--50 {
+		background-color: #feda77;
+	}
+}
+
+.amount__count,
+.left__count {
+	display: block;
+	margin-right: 2rem;
+	font-weight: 400;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap&subset=cyrillic"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles/app.css">
+	<title>Мой бюджет</title>
+</head>
+
+<body>
+	<ul class="lang">
+		<li class="lang__item">
+			<a href="index-ru.html" class="lang__link">RU</a>
+		</li>
+		<li class="lang__item">
+			<a href="index.html" class="lang__link">EN</a>
+		</li>
+	</ul>
+	<div class="app">
+		<h1 class="title">Мой бюджет
+			<img src="image/debit-card.svg" alt="Cards" class="title__ico">
+		</h1>
+		<div class="money">
+			<form class="money-form">
+				<label class="money-form__label">Сколько у Вас денег?:
+					<input type="number" name="money__count" class="money-form__input" required placeholder="$0"
+						min="10" max="1000000">
+				</label>
+			</form>
+		</div>
+		<div class="row">
+			<div class="column">
+				<!-- form -->
+				<form class="form">
+					<label class="form__label" aria-label="What did you spend">
+						<input type="text" name="spend" class="form__input" placeholder="На что потратили?" required>
+					</label>
+					<label class="form__label" aria-label="How much did you spend">
+						<input type="number" name="spend__much" class="form__input" placeholder="Сколько потратили?"
+							required min="1">
+					</label>
+					<button type="submit" class="form__btn">Добавить сумму</button>
+				</form>
+			</div>
+			<div class="column">
+				<ul class="spend-list">
+
+				</ul>
+				<p class="amount"><span class="amount__count"></span>Начальный капитал</p>
+				<p class="left"><span class="left__count"></span>Осталось на счету</p>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="scripts/app.js"></script>
+</body>
+
+</html>
