@@ -1,4 +1,4 @@
-## Simple budget control
+## [Simple budget control](https://developer-nagoev.github.io/dev-apps/budget-control-simple/index.html)
 
 **Functionality:**
 
